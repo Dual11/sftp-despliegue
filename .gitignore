@@ -4,6 +4,32 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
+# Claves privadas SSH - NUNCA SUBIR A GIT
+ssh-keys/sftp_key
+ssh-keys/*_key
+*.pem
+id_rsa
+id_rsa.*
+
+# Datos temporales
+sftp-data/
+uploads/
+
+# Build
+
+*.class
+*.jar
+*.war
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# Logs
+*.log
+logs/
+
 ### STS ###
 .apt_generated
 .classpath

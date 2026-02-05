@@ -25,8 +25,9 @@ public class SftpService {
         try {
             // 1. Crear sesión SSH
             JSch jsch = new JSch();
+            jsch.addIdentity(config.getPrivateKeyPath(),config.getPrivateKeyPass());
             session = jsch.getSession(config.getUser(), config.getHost(), config.getPort());
-            session.setPassword(config.getPassword());
+
             session.setConfig("StrictHostKeyChecking", "no");
 
             logger.info("Conectando a {}@{}:{}", config.getUser(), config.getHost(), config.getPort());
